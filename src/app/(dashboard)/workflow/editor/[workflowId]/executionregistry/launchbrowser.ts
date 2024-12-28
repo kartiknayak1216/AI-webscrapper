@@ -33,6 +33,7 @@ export default async function LaunchBrowserExecution(
 
     return true;
   } catch (error) {
+    console.log(error)
     environment.setLog(
       `An error occurred in LaunchBrowserExecution`,
       LogLevel.ERROR
