@@ -10,7 +10,6 @@ return <GraphHelpers {...props}/>
    },
    isEntry:false,
    credit:2,
-   isGraph:true,
 
    inputs:[
     {
