@@ -15,7 +15,8 @@ export default async function LaunchBrowserExecution(
     }
 
     const browser = await puppeteer.launch({
-      headless: true
+      headless: true,
+      executablePath: puppeteer.executablePath()
     });
 
     if (!browser) {
