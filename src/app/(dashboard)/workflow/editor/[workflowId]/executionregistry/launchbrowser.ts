@@ -19,6 +19,7 @@ export default async function LaunchBrowserExecution(
     });
 
     if (!browser) {
+      
       environment.setLog("Failed to launch Puppeteer browser.", LogLevel.ERROR);
       return false;
     }
@@ -33,9 +34,9 @@ export default async function LaunchBrowserExecution(
 
     return true;
   } catch (error) {
-    console.log(error)
+    console.log("An error occurred in LaunchBrowserExecution",error)
     environment.setLog(
-      `An error occurred in LaunchBrowserExecution`,
+      `An error occurred in LaunchBrowserExecution ${JSON.stringify(error)}`,
       LogLevel.ERROR
     );
     return false;
